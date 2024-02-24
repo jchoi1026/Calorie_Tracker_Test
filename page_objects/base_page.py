@@ -18,7 +18,7 @@ class BasePage:
         wait = WebDriverWait(self._driver, time)
         wait.until(ec.visibility_of_element_located(locator))
 
-    def _type(self, locator: tuple, text: str, time: int = 10):
+    def _type(self, locator: tuple, text, time: int = 10):
         self._wait_until_element_is_visible(locator, time)
         self._find(locator).send_keys(text)
 
